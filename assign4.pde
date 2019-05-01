@@ -393,7 +393,7 @@ void draw() {
                 else if((i + j) % 3 != 1) soilHealth[i][j] = 30;
               break;
           } }
-         	println(4);   
+ 
           if(i != 0){     
             int empty = floor(random(2)+1);
             int last = -1;     
