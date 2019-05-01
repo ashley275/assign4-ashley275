@@ -363,6 +363,7 @@ void draw() {
       if(mousePressed){
         gameState = GAME_RUN;
         mousePressed = false;
+	println(1);
   
         // Initialize player
         playerX = PLAYER_INIT_X;
