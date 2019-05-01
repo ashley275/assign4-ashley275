@@ -363,7 +363,7 @@ void draw() {
       if(mousePressed){
         gameState = GAME_RUN;
         mousePressed = false;
-  	println(1);
+
         // Initialize player
         playerX = PLAYER_INIT_X;
         playerY = PLAYER_INIT_Y;
@@ -371,14 +371,14 @@ void draw() {
         playerRow = (int) (playerY / SOIL_SIZE);
         playerMoveTimer = 0;
         playerHealth = 2;
-  	println(2);
+
         // Initialize soilHealth
         for(int i = 0; i < soilHealth.length; i++){
           for (int j = 0; j < soilHealth[i].length; j++) { 
             // 0: no soil, 15: soil only, 30: 1 stone, 45: 2 stones
             soilHealth[i][j] = 15;
             int areaIndex = floor(i / 4);
-        	println(3);
+
             switch(areaIndex){
               case 0:
               case 1:
@@ -402,10 +402,9 @@ void draw() {
               int j = floor(random(8)); 
               if(j == last) k--;
               else{
-                oilHealth[i][j] = 0;
+                soilHealth[i][j] = 0;
                 last = j;         
         } } } }
-        	println(5);
         
         // Initialize soldiers and their position          
         for(int s = 0; s < soldierX.length; s++){
