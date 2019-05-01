@@ -363,7 +363,6 @@ void draw() {
       if(mousePressed){
         gameState = GAME_RUN;
         mousePressed = false;
-	println(1);
   
         // Initialize player
         playerX = PLAYER_INIT_X;
@@ -406,7 +405,7 @@ void draw() {
                 oilHealth[i][j] = 0;
                 last = j;         
         } } } }
-        
+        	println(1);
         
         // Initialize soldiers and their position          
         for(int s = 0; s < soldierX.length; s++){
