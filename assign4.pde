@@ -206,9 +206,10 @@ void draw() {
     for(int c = 0; c < cabbageX.length; c++){
         
       if(cabbageX[c] < playerX+80 && cabbageX[c]+80 > playerX
-      && cabbageY[c] < playerY+80 && cabbageY[c]+80 > playerY){
+      && cabbageY[c] < playerY+80 && cabbageY[c]+80 > playerY
+      && playerHealth < PLAYER_MAX_HEALTH){
           
-        if(playerHealth < PLAYER_MAX_HEALTH) playerHealth += 1;
+        playerHealth += 1;
         cabbageX[c] = 640;
         
       }else image(cabbage, cabbageX[c], cabbageY[c]);
